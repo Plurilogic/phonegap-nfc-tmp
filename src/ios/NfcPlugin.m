@@ -41,7 +41,7 @@
         [_nfcSession invalidateSession];
     }
 
-    _nfcSession = [[NFCNDEFReaderSession new]initWithDelegate:self queue:nil invalidateAfterFirstRead:TRUE];
+    _nfcSession = [[NFCNDEFReaderSession alloc]initWithDelegate:self queue:nil invalidateAfterFirstRead:TRUE];
     ndefStartSessionCallbackId = [command.callbackId copy];
     [_nfcSession beginSession];
 }
